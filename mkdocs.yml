@@ -1,1 +1,141 @@
 site_name: Desarrollo de Aplicaciones Móviles Android
+site_description: >-
+  Curso que va desde los fundamentos de Kotlin hasta una aplicación Android
+  completa con Jetpack Compose
+site_url: https://jmcandia.github.io/desarrollo-aplicaciones-moviles-android/
+
+repo_url: https://github.com/jmcandia/desarrollo-aplicaciones-moviles-android
+repo_name: GitHub
+
+theme:
+  name: material
+  language: es
+  favicon: assets/images/favicon.png
+  logo: assets/images/favicon.png
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Cambiar a modo oscuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Cambiar a modo claro
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+    - content.diagrams.mermaid
+
+extra_css:
+  - assets/css/custom.css
+
+extra_javascript:
+  - assets/js/custom.js
+
+plugins:
+  - search:
+      lang: es
+  - callouts
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.emoji:
+      emoji_index: !!python/name:pymdownx.emoji.gemoji
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
+
+nav:
+  - "Inicio": index.md
+  - "Cómo usar el libro": como-usar-el-libro.md
+  - "Convenciones y laboratorios": convenciones-y-laboratorios.md
+  - "Unidad 1 · Fundamentos autónomos de Kotlin":
+      - "Presentación": unidad-1-kotlin/index.md
+      - "Kotlin y su ecosistema": unidad-1-kotlin/01-kotlin-y-su-ecosistema.md
+      - "Sintaxis, declaraciones y expresiones": unidad-1-kotlin/02-sintaxis-y-expresiones.md
+      - "Tipos y seguridad frente a nulos": unidad-1-kotlin/03-tipos-y-null-safety.md
+      - "Control de flujo e iteración": unidad-1-kotlin/04-control-de-flujo.md
+      - "Funciones": unidad-1-kotlin/05-funciones.md
+      - "Clases, propiedades y objetos": unidad-1-kotlin/06-clases-y-objetos.md
+      - "Interfaces, herencia y composición": unidad-1-kotlin/07-interfaces-y-composicion.md
+      - "Enumeraciones y jerarquías selladas": unidad-1-kotlin/08-enums-y-tipos-sellados.md
+      - "Colecciones, secuencias y transformaciones": unidad-1-kotlin/09-colecciones-y-secuencias.md
+      - "Genéricos y variancia": unidad-1-kotlin/10-genericos-y-variancia.md
+      - "Extensiones, operadores y delegación": unidad-1-kotlin/11-extensiones-y-delegacion.md
+      - "Errores, resultados y recursos": unidad-1-kotlin/12-errores-y-recursos.md
+      - "Programación funcional y diseño de transformaciones": unidad-1-kotlin/13-funcional-y-colecciones-inmutables.md
+      - "Concurrencia en Kotlin": unidad-1-kotlin/14-concurrencia-kotlin.md
+      - "Leer, diseñar y mantener programas Kotlin": unidad-1-kotlin/15-lectura-y-diseno-de-programas.md
+      - "Recorrido conceptual · Modelar un dominio con Kotlin": unidad-1-kotlin/recorrido-modelar-dominio.md
+      - "Tutorial · Biblioteca de dominio para estacionamientos": unidad-1-kotlin/tutorial-kotlin-parking.md
+      - "Evaluación": unidad-1-kotlin/evaluacion.md
+  - "Unidad 2 · Desarrollo de aplicaciones Android":
+      - "Presentación": unidad-2-android/index.md
+      - "Plataforma Android y proyecto": unidad-2-android/01-plataforma-y-proyecto-android.md
+      - "Actividad, ciclo de vida y recursos": unidad-2-android/02-actividad-ciclo-de-vida-y-recursos.md
+      - "Jetpack Compose y estado": unidad-2-android/03-compose-y-estado.md
+      - "Material 3 y diseño adaptable": unidad-2-android/04-material-3-y-diseno-adaptable.md
+      - "Entradas, formularios y validación": unidad-2-android/05-entradas-formularios-y-validacion.md
+      - "Navegación con Navigation Compose": unidad-2-android/06-navegacion-compose.md
+      - "Arquitectura Android y MVVM": unidad-2-android/07-arquitectura-android-y-mvvm.md
+      - "ViewModel, StateFlow y estado de pantalla": unidad-2-android/08-viewmodel-stateflow-y-estado-ui.md
+      - "Coroutines y Flow en Android": unidad-2-android/09-coroutines-y-flow-en-android.md
+      - "Room como fuente local de verdad": unidad-2-android/10-room-y-modelo-local.md
+      - "Foto de matrícula, permisos y archivos": unidad-2-android/11-foto-permisos-y-ciclo-de-vida.md
+      - "Preferencias con DataStore": unidad-2-android/12-preferencias-con-datastore.md
+      - "Errores, accesibilidad y localización": unidad-2-android/13-errores-accesibilidad-y-localizacion.md
+      - "Recorrido conceptual · Primera aplicación Android": unidad-2-android/recorrido-primera-app.md
+      - "Tutorial · Proyecto y primera pantalla de ParkFlow": unidad-2-android/tutorial-primera-pantalla-parkflow.md
+      - "Recorrido conceptual · Navegación y estructura": unidad-2-android/recorrido-estructura-y-navegacion.md
+      - "Tutorial · Formularios y componentes de ParkFlow": unidad-2-android/tutorial-formularios-componentes-parkflow.md
+      - "Tutorial · ParkFlow offline con Room": unidad-2-android/tutorial-parkflow-room-offline.md
+      - "Evaluación": unidad-2-android/evaluacion.md
+  - "Unidad 3 · Integración, calidad y distribución":
+      - "Presentación": unidad-3-integracion-y-distribucion/index.md
+      - "Arquitecturas cliente y servicios gestionados": unidad-3-integracion-y-distribucion/01-arquitecturas-clientes-y-servicios-gestionados.md
+      - "Evaluar Firebase para ParkFlow": unidad-3-integracion-y-distribucion/02-evaluar-firebase-para-parkflow.md
+      - "Modelo remoto y contratos de datos": unidad-3-integracion-y-distribucion/03-modelo-de-datos-remoto-y-contratos.md
+      - "Autenticación, identidad y sesión": unidad-3-integracion-y-distribucion/04-autenticacion-y-sesion.md
+      - "Autorización, perfiles y reglas": unidad-3-integracion-y-distribucion/05-autorizacion-roles-y-reglas.md
+      - "Sincronización offline-first": unidad-3-integracion-y-distribucion/06-sincronizacion-offline-first.md
+      - "Idempotencia, conflictos y reintentos": unidad-3-integracion-y-distribucion/07-idempotencia-conflictos-y-reintentos.md
+      - "Fotografías y almacenamiento remoto": unidad-3-integracion-y-distribucion/08-fotografias-y-almacenamiento-remoto.md
+      - "Seguridad local y Android Keystore": unidad-3-integracion-y-distribucion/09-seguridad-y-keystore.md
+      - "Pruebas y compatibilidad Android": unidad-3-integracion-y-distribucion/10-pruebas-unitarias-e-integracion.md
+      - "Pruebas de Compose y navegación": unidad-3-integracion-y-distribucion/11-pruebas-compose-y-navegacion.md
+      - "Calidad, observabilidad y mantenimiento": unidad-3-integracion-y-distribucion/12-calidad-observabilidad-y-mantenimiento.md
+      - "Firma, versiones y distribución": unidad-3-integracion-y-distribucion/13-firma-versiones-y-distribucion.md
+      - "Tutorial · ParkFlow con servicio gestionado": unidad-3-integracion-y-distribucion/tutorial-parkflow-sincronizado.md
+      - "Evaluación final · ParkFlow distribuible": unidad-3-integracion-y-distribucion/evaluacion-final.md
+  - "Apéndices":
+      - "Pilares de la programación orientada a objetos": apendices/pilares-poo.md
+      - "Principios SOLID": apendices/solid.md
+      - "KISS y DRY": apendices/kiss-y-dry.md
+  - "Referencias": referencias.md
